@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 13:23:56 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/25 17:51:17 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/25 19:41:46 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(
 	this->Form::operator=(lhs);
 }
 
-void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
+void	ShrubberyCreationForm::execute_child(Bureaucrat const & executor) const
 {
 	//this->checkGrade(executor.getGrade(), SH_EXEC_MIN);
 	std::string	trees =
