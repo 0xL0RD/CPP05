@@ -3,7 +3,7 @@ SRCS = Bureaucrat.cpp				main.cpp
 BUILD = ./BUILD/
 OBJS = $(addprefix $(BUILD), $(SRCS:%.cpp=%.o))
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP -g3
 
 all: $(NAME)
 
@@ -29,4 +29,6 @@ run: $(NAME)
 
 .PHONY: all clean fclean re run
 
-.:EFAULT_GOAL = all
+.DEFAULT_GOAL = all
+
+-include $(OBJS:%.o=%.d)

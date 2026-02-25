@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 17:28:28 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/25 06:48:20 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/25 08:46:58 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,24 @@ int	main(void)
 	{
 		Bureaucrat c("Pepe", 76);
 		std::cout << c << std::endl;
+	}
+	{
+		Bureaucrat a("Ana", 88);
+		Bureaucrat a2(a);
+		std::cout << "Ana:" << std::endl;
+		std::cout << a << std::endl;
+		std::cout << "Ana copy:" << std::endl;
+		std::cout << a2 << std::endl;
+	}
+	{
+		Bureaucrat a("Ana", 88);
+		Bureaucrat j("Jose", 122);
+		std::cout << "Ana:" << std::endl;
+		std::cout << a << std::endl;
+		std::cout << "Jose:" << std::endl;
+		std::cout << j  << std::endl;
+		j = a;
+		std::cout << "Jose (after =ing):" << std::endl;
+		std::cout << j  << std::endl;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 17:28:28 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/25 06:35:02 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/25 10:05:51 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ class Bureaucrat
 
 	private:
 		const std::string	_name;
-		int			_grade;
+		int					_grade;
 };
 
 std::ostream&	operator<<(std::ostream &os, Bureaucrat &b);
