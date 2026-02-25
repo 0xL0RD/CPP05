@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 17:28:28 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/25 11:10:59 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/25 11:56:51 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,9 @@ int	main(void)
 		Form f("M601", 15, 8);
 		b.signForm(f);
 		std::cout << f << std::endl;
+	}
+	{
+		//Form f;
 	}
 	std::cout << "----------------" << std::endl;
 	return (0);
