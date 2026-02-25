@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 17:28:28 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/25 11:00:15 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/25 11:10:59 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,22 @@ int	main(void)
 		std::cout << "Copied form2 -signed-:" << std::endl;
 		std::cout << f2 << std::endl;
 
+	}
+	{
+		std::cout << "----------------" << std::endl;
+		std::cout << "Bureaucrat signs:" << std::endl;
+		Bureaucrat b("Funcionario", 150);
+		Form f("M601", 150, 8);
+		b.signForm(f);
+		std::cout << f << std::endl;
+	}
+	{
+		std::cout << "----------------" << std::endl;
+		std::cout << "Bureaucrat do NOT sign -ends gracefully-:" << std::endl;
+		Bureaucrat b("Funcionario", 150);
+		Form f("M601", 15, 8);
+		b.signForm(f);
+		std::cout << f << std::endl;
 	}
 	std::cout << "----------------" << std::endl;
 	return (0);
