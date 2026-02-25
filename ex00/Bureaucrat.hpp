@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 17:28:28 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/24 19:31:15 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/25 06:35:02 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ class Bureaucrat
 	};
 
 	private:
-		std::string	_name;
+		const std::string	_name;
 		int			_grade;
 };
 

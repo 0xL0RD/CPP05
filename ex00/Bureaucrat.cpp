@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 17:38:00 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/24 20:07:18 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/25 06:50:30 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ Bureaucrat::Bureaucrat(const Bureaucrat &other)
 }
 
 Bureaucrat::Bureaucrat(std::string name, int grade)
+	:	_name(name)
 {
-	this->_name = name;
 	this->setGrade(grade);
 }
 
@@ -40,7 +40,6 @@ Bureaucrat::~Bureaucrat(void)
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat &lhs)
 {
-	this->_name = lhs._name;
 	this->setGrade(lhs._grade);
 	return (*this);
 }
@@ -86,6 +85,6 @@ const char* Bureaucrat::GradeTooLowException::what(void) const throw()
 }
 std::ostream&	operator<<(std::ostream &os, Bureaucrat &b)
 {
-	os << b.getName() << ", bureaucrat grade " << b.getGrade() << std::endl;
+	os << b.getName() << ", bureaucrat grade " << b.getGrade() << ".";
 	return (os);
 }

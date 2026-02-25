@@ -29,4 +29,4 @@ run: $(NAME)
 
 .PHONY: all clean fclean re run
 
-.DEFAULT_GOAL = all
+.:EFAULT_GOAL = all

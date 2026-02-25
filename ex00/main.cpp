@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 17:28:28 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/24 20:06:35 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/25 06:48:20 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,9 @@ int	main(void)
 	catch (Bureaucrat::GradeTooLowException &e)
 	{
 		std::cout << e.what() << std::endl;
+	}
+	{
+		Bureaucrat c("Pepe", 76);
+		std::cout << c << std::endl;
 	}
 }
