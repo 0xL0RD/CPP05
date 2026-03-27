@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 12:54:13 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/25 17:51:36 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/03/27 09:51:53 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # define SHRUBBERYCREATIONFORM_HPP
 
 # include <string>
-# include <ofstream>
+# include <fstream>
 
 # include "AForm.hpp"
 # include "Bureaucrat.hpp"
@@ -40,4 +40,5 @@ class ShrubberyCreationForm : public AForm
 		const std::string	_target;
 		ShrubberyCreationForm(void);
 };
+
 #endif

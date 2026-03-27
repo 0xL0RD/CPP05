@@ -6,16 +6,19 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 08:05:42 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/25 17:57:38 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/03/27 08:28:56 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
 
+/*
+ * _signGrade needs to be initialized
 AForm::AForm(void)
 {
 	return ;
 }
+*/
 
 AForm::AForm(const std::string &name, int signGrade, int execGrade)
 	:	_name(name),
@@ -53,7 +56,7 @@ void	AForm::execute(Bureaucrat const & executor) const
 	this->execute_child(executor);
 }
 
-void	AForm::checkIsSigned(void)
+void	AForm::checkIsSigned(void) const
 {
 	if (this->_isSigned == false)
 		throw (AForm::FormNotSigned());
@@ -85,12 +88,12 @@ void		AForm::beSigned(const Bureaucrat &b)
 	this->_isSigned = true;
 }
 
-void	AForm::checkGrade(int grade)
+void	AForm::checkGrade(int grade) const
 {
 	checkGrade(grade, BU_GRADE_MIN);
 }
 
-void	AForm::checkGrade(int grade, int mingrade)
+void	AForm::checkGrade(int grade, int mingrade) const
 {
 	if (grade < BU_GRADE_MAX)
 		throw (AForm::GradeTooHighException());

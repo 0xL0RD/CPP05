@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 07:00:05 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/25 17:52:58 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/03/27 08:25:31 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,20 +45,20 @@ class AForm
 				virtual const char* what(void) const throw();
 	};
 		class GradeTooLowException : public std::exception
-			public:
 	{
+			public:
 				virtual const char* what(void) const throw();
 	};
 		class FormNotSigned : public std::exception
-			public:
 	{
+			public:
 				virtual const char* what(void) const throw();
 	};
 	
 	protected:
-		void	checkGrade(int grade);
-		void	checkGrade(int grade, int mingrade);
-		void	checkIsSigned(void);
+		void	checkGrade(int grade) const;
+		void	checkGrade(int grade, int mingrade) const;
+		void	checkIsSigned(void) const;
 
 	private:
 		const std::string	_name;

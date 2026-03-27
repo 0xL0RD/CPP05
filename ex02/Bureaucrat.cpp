@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 17:38:00 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/25 10:15:10 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/03/27 07:32:21 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ const char* Bureaucrat::GradeTooLowException::what(void) const throw()
 	return ("Grade is too low");
 }
 
-void		Bureaucrat::signForm(Form &form) const
+void		Bureaucrat::signForm(AForm &form) const
 {
 	try
 	{

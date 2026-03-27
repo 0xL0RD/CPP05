@@ -1,8 +1,7 @@
 NAME = Bureaucrat
-SRCS =	main.cpp															\
-		Bureaucrat.cpp						AForm.cpp						\
-		Shrubbery							CreationForm.cpp				\
-		RobotomyRequestForm.cpp				PresidentialPardonForm.cpp
+SRCS =	Bureaucrat.cpp						AForm.cpp						\
+		ShrubberyCreationForm.cpp											\
+		main.cpp
 BUILD = ./BUILD/
 OBJS = $(addprefix $(BUILD), $(SRCS:%.cpp=%.o))
 CXX = c++

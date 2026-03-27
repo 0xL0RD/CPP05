@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 17:28:28 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/25 18:03:55 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/03/27 07:35:01 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 # include <string>
 # include <stdexcept>
 
-# include "Form.hpp"
+# include "AForm.hpp"
 
 # define BU_GRADE_MIN 150
 # define BU_GRADE_MAX 1
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -40,8 +40,8 @@ class Bureaucrat
 		void		decrementGrade(void);
 		void		setGrade(int grade);
 
-		void		signForm(Form &form) const;
-		void		 executeForm(AForm const & form) const 
+		void		signForm(AForm &form) const;
+		void		executeForm(AForm const & form) const;
 
 		class GradeTooHighException: public std::exception
 	{

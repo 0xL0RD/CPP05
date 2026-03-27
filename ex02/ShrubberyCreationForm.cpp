@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 13:23:56 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/25 19:41:46 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/03/27 10:22:16 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,19 +35,24 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(
 		const ShrubberyCreationForm &lhs
 		)
 {
-	this->Form::operator=(lhs);
+	this->AForm::operator=(lhs);
+	return (*this);
 }
 
 void	ShrubberyCreationForm::execute_child(Bureaucrat const & executor) const
 {
+	(void) executor;
+	std::string	fileName = this->_target + "_" + SH_NAME;
 	//this->checkGrade(executor.getGrade(), SH_EXEC_MIN);
+	//checkGrade(executor.getGrade());
 	std::string	trees =
 		"      *         *     \n"
 		"     ***       ***    \n"
 		"    *****     *****   \n"
 		"   *******   *******  \n"
 		"      ||        ||    \n";
-	std::ofstream file(this->_target + SH_NAME);
-	file.write(trees.c_str(), trees.size());
-	file.close();
+	std::ofstream myfile(fileName.c_str());
+	//std::ofstream myfile("hola.txt");
+	myfile.write(trees.c_str(), trees.size());
+	myfile.close();
 }
