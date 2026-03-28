@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 07:00:05 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/03/27 08:25:31 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/03/28 08:27:40 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class AForm
 	public:
 		AForm(const AForm &other);
 		AForm(const std::string &name, int signGrade, int execGrade);
-		~AForm(void);
+		virtual ~AForm(void);
 		
 		AForm& operator=(const AForm &lhs);
 
