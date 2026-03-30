@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/27 09:16:51 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/03/28 10:28:07 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/03/30 16:36:25 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,6 +110,22 @@ int	main(void)
 		}
 		else
 			std::cout << "ERROR creating form" << std::endl;
+		std::cout << std::endl;
+	}
+	/*
+	 * No state --> not instantiable
+	{
+		Intern someRandomIntern;
+		AForm* rrf;
+		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+		delete rrf;
+	}
+	*/
+	{
+		std::cout << "5) Subject example" << std::endl;
+		AForm* rrf;
+		rrf = Intern::makeForm("robotomy", "Bender");
+		delete rrf;
 	}
 	std::cout << std::endl;
 	return (0);
