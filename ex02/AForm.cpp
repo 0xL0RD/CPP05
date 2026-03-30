@@ -45,7 +45,8 @@ AForm::~AForm(void)
 		
 AForm& AForm::operator=(const AForm &lhs)
 {
-	this->_isSigned = lhs.isSigned();
+	if (&lhs != this)
+		this->_isSigned = lhs.isSigned();
 	return (*this);
 }
 

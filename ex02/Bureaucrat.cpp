@@ -40,7 +40,8 @@ Bureaucrat::~Bureaucrat(void)
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat &lhs)
 {
-	this->setGrade(lhs.getGrade());
+	if (&lhs != this)
+		this->setGrade(lhs.getGrade());
 	return (*this);
 }
 

@@ -111,7 +111,7 @@ int	main(void)
 	}
 	{
 		std::cout << std::endl;
-		std::cout << "6) Robotomizing" << std::endl;
+		std::cout << "6) Robotomizing: too high" << std::endl;
 		std::string				formName = "Person";
 		RobotomyRequestForm		f(formName);
 		try
