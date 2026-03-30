@@ -35,6 +35,7 @@ Form::Form(const Form &other)
 		_execGrade(other._execGrade)
 {
 	this->_isSigned = false;	// at construction, it is not
+	//*this = other;
 }
 
 Form::~Form(void)
@@ -46,7 +47,7 @@ Form& Form::operator=(const Form &lhs)
 {
 	if (&lhs != this)
 	{
-		this->_isSigned = lhs.isSigned();
+		this->_isSigned = lhs._isSigned;
 	}
 	return (*this);
 }
