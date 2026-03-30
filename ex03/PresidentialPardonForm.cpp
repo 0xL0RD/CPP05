@@ -37,7 +37,8 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(
 			const PresidentialPardonForm &lhs
 		)
 {
-	this->AForm::operator=(lhs);
+	if (&lhs != this)
+		this->AForm::operator=(lhs);
 	return (*this);
 }
 

@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/27 16:07:34 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/03/28 10:34:23 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/03/30 16:19:49 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,18 @@ AForm* Intern::makeForm(std::string formName, std::string &target)
 		newPresidentialPardonForm,
 		newRobotomyRequestForm
 	};
+	AForm* f;
 	
 	len = sizeof(names) / sizeof(names[0]);
 	for (i = 0; i < len; i++)
 	{
 		if (formName == names[i])
-			return (formCreator[i](target));
+		{
+			f = formCreator[i](target);
+			std::cout << "Intern creates '" << formName << "'" << std::endl;
+			return (f);
+		}
 	}
+	std::cout << "Intern did not find form '" << formName << "'" << std::endl;
 	return (NULL);
 }
