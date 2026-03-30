@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/27 16:07:34 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/03/30 16:19:49 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/03/30 16:39:58 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ AForm*	Intern::newRobotomyRequestForm(std::string &target)
 	return (new RobotomyRequestForm(target));
 }
 
-AForm* Intern::makeForm(std::string formName, std::string &target)
+AForm* Intern::makeForm(std::string formName, std::string target)
 {
 	int	len;
 	int	i;
