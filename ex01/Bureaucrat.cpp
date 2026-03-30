@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 17:38:00 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/25 10:15:10 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/03/30 15:26:54 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ Bureaucrat::~Bureaucrat(void)
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat &lhs)
 {
-	this->setGrade(lhs.getGrade());
+	if (&lhs != this)
+		this->setGrade(lhs.getGrade());
 	return (*this);
 }
 

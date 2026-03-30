@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 08:05:42 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/25 10:31:47 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/03/30 15:30:42 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,10 @@ Form::~Form(void)
 		
 Form& Form::operator=(const Form &lhs)
 {
-	this->_isSigned = lhs.isSigned();
+	if (&lhs != this)
+	{
+		this->_isSigned = lhs.isSigned();
+	}
 	return (*this);
 }
 
